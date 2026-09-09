@@ -93,17 +93,14 @@ h1{
     padding-top:70px;
     margin-left: 5px;
 }
-.p1{
+
+footer p{
     text-align:center;
     padding:30px;
     background-color:rgb(138, 137, 137);
     color:white;
      font-size:x-large;
-}
-#last-modified{
-    text-align:center;
-    color:black;
-     font-size:x-large;
+
 }
 
   
