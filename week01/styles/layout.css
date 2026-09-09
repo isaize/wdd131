@@ -31,7 +31,8 @@ nav ul li a{
     color: white;
 }
 .container{
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(200px, 99%) 1fr;
     gap: 0px;
     font-size: 15px;
   
@@ -51,6 +52,9 @@ nav ul li a{
     width: 30%;
     height: 250px;
    
+}
+.card2 h2{
+    margin-left: 5px;
 }
 footer p{
     background-color: rgb(1, 1, 1);
