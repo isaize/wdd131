@@ -21,6 +21,9 @@ header {
     margin: 0 auto;
     border-radius: 20px;
 }
+nav{
+    display:flex;
+}
 
 .navigation {
     display: flex;
@@ -108,7 +111,7 @@ figcaption {
     margin-top: 15px;
 }
 .navigation a:hover {
-    background-color: rgb(225, 126, 240);
+    background-color: white;
     color:black;
     font-weight: 700;
 }
@@ -122,7 +125,7 @@ figcaption {
 footer {
     text-align: center;
     padding: 30px;
-    background-color: rgb(50, 49, 49);
+    background-color: gray;
     color: white;
     font-size: x-large;
     max-width: 800px;
