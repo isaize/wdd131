@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: skyblue;
+    color: black;
+}
+
+header {
+    background-color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    background-color: skyblue;
+    color: #fff;
+    gap: 10px;
+    border-radius: 20px;
+    padding-top: 3.5rem;
+
+}
+
+h1 {
+    text-align: left;
+    font-family: times, serif;
+    font-size: 18px;
+    margin-left: 16px;
+}
+
+#home {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin: 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.images-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+    place-items: center;
+}
+
+figure {
+    background-color: skyblue;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0.5rem;
+}
+
+figcaption {
+    font-size: large;
+    text-align: center;
+    margin: 5px;
+    color: white;
+}
+
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❌";
+   
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+    margin-top: 15px;
+}
+.navigation a:hover {
+    background-color: rgb(225, 126, 240);
+    color:black;
+    font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(50, 49, 49);
+    color: white;
+    font-size: x-large;
+    max-width: 800px;
+    margin: 0 auto;
+
+}

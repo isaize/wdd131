@@ -1,0 +1,52 @@
+/* large Screen*/
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #album {
+        background-color: skyblue;
+        margin-left: 5px;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    .navigation {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .images-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        place-items: center;
+    }
+
+    figure {
+        background-color: skyblue;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0.5rem;
+    }
+
+    figcaption {
+        font-size: large;
+    }
+
+}
