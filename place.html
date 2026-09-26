@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Country </title>
+    <meta name="description" content="My Country: Explore different beautiful infrastructures across my country.">
+    <meta name="author" content="Innocent Saize">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora:wght@400;600&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Zimbabwe</h1>
+    </header>
+    <div class="bar"></div>
+
+    <main>
+        <picture>
+            <source srcset="images/my-zim.webp" media="(min-width: 1000px)">
+            <source srcset="images/zim.webp" media="(min-width: 550px)">
+            <img src="images/zim.webp" alt="Tallest Building" width="400" height="200">
+        </picture>
+        <section class="data">
+            <h2>DATA</h2>
+            <p>Area: 587041 sq km</p>
+            <p>Population: 14,000,000</p>
+            <p>Capital: Harare</p>
+            <p>Language: Shona, English</p>
+            <p>Currency: ZIG </p>
+            <p>Time Zone: CAT</p>
+            <p>Calling Code: +263</p>
+            <p>Internet TLD: zw</p>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <p class="w-icon">⛅</p>
+            <p>Temperature: 17&deg;C</p>
+            <p>Conditions: Clear</p>
+            <p>Wind: 20km/h</p>
+            <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+        </section>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Innocent Saize.🌹Zimbabwe</p>
+        <p id="last-modified"></p>
+
+
+    </footer>
+
+</body>
+
+</html>
