@@ -6,6 +6,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 header {
@@ -15,6 +17,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 header h1 {
