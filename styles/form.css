@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -18,28 +18,29 @@ main {
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
-
 }
 
 h1 {
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 1px;
+    margin-bottom: 20px;
     background-color: #333;
     border: 1px solid #ccc;
     padding: 25px;
 }
 
-#productName {
+label, legend {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#productName, #installDate, #userName, #review, textarea, select, input[type="date"], input[type="text"] {
+    width: 100%;
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
-
-h2 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-
 
 /* use reverse flexbox to take advantage of flex-direction: reverse */
 .star-rating {
@@ -48,7 +49,7 @@ h2 {
     width: 160px;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin: 40px auto;
+    margin: 10px auto 20px;
     position: relative;
 }
 
@@ -57,24 +58,15 @@ h2 {
     display: none;
 }
 
-/* set properties of all labels */
-.star-rating>label {
+/* set properties of all labels - hide text but keep for audit/screen readers */
+.star-rating > label {
     width: 30px;
     height: 30px;
     font-family: Arial;
-    font-size: 30px;
+    font-size: 0; /* hides "5 Stars" text visually, audit still sees it */
     transition: 0.2s ease;
     color: gold;
-}
-
-/* give label a hover state */
-.star-rating label:hover {
-    color: #ff69b4;
-    transition: 0.2s ease;
-}
-
-.star-rating label:active::before {
-    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* set shape of unselected label */
@@ -82,60 +74,66 @@ h2 {
     content: '\2606';
     position: absolute;
     top: 0px;
-    line-height: 15px;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+/* give label a hover state */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ff69b4;
+}
+
+.star-rating label:active::before {
+    transform: scale(1.1);
 }
 
 /* set full star shape for checked label and those that come after it */
-.star-rating input:checked~label:before {
+.star-rating input:checked ~ label::before {
     content: '\2605';
-}
-
-@-moz-document url-prefix() {
-    .star-rating input:checked~label:before {
-        font-size: 36px;
-        line-height: 21px;
-    }
-}
-
-#installDate {
-    margin-bottom: 10px;
-    padding: 5px;
 }
 
 fieldset {
     border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
 }
 
-#userName {
-    margin: 10px;
-    padding: 5px;
-}
-
-.review {
-    margin: 10px;
-    padding: 10px;
+fieldset div {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    margin: 5px 0;
+}
+
+fieldset div input[type="checkbox"] {
+    width: auto;
+}
+
+fieldset div label {
+    margin: 0;
+    font-weight: normal;
 }
 
 #submit {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 50%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 15px auto;
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 #submit:hover {
     color: black;
-    transition: 0.2s ease;
     background-color: gold;
+    transition: 0.2s ease;
 }
 
 footer {
@@ -144,4 +142,64 @@ footer {
     background-color: #333;
     border: 1px solid #ccc;
     padding: 25px;
+    border-radius: 5px;
+}
+/* Large screens - 768px and up */
+@media (min-width: 768px) {
+    body {
+        max-width: 800px;
+        padding: 40px;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .star-rating {
+        width: 220px;
+    }
+
+    .star-rating > label {
+        width: 40px;
+        height: 40px;
+    }
+
+    .star-rating label::before {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    #submit {
+        width: 40%;
+        font-size: 18px;
+    }
+}
+
+/* Extra large screens - 1024px and up. 
+
+i learn this on facebook page name: dark code*/
+@media (min-width: 1024px) {
+    body {
+        max-width: 1000px;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    form > fieldset,
+    form > label,
+    form > #productName,
+    form > #installDate,
+    form > #review,
+    form > #userName,
+    form > #submit {
+        grid-column: span 2;
+    }
 }
