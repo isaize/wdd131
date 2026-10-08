@@ -17,9 +17,11 @@
 </head>
 
 <body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
     <main>
         <form method="get" action="review.html">
-            <h1>Product Review Form</h1>
             <label for="productName">Product Name:</label>
             <select id="productName" name="productName" required>
                 <option value="" disabled selected>Select a product</option>
@@ -27,19 +29,19 @@
             <h2>Rating</h2>
             <div class="star-rating">
 
-                <input type="radio" name="stars" id="star-a" value="5" />
+                <input type="radio" name="stars" id="star-a" value="5" required />
                 <label for="star-a"></label>
 
-                <input type="radio" name="stars" id="star-b" value="4" />
+                <input type="radio" name="stars" id="star-b" value="4" required />
                 <label for="star-b"></label>
 
-                <input type="radio" name="stars" id="star-c" value="3" />
+                <input type="radio" name="stars" id="star-c" value="3" required />
                 <label for="star-c"></label>
 
-                <input type="radio" name="stars" id="star-d" value="2" />
+                <input type="radio" name="stars" id="star-d" value="2" required />
                 <label for="star-d"></label>
 
-                <input type="radio" name="stars" id="star-e" value="1" />
+                <input type="radio" name="stars" id="star-e" value="1" required />
                 <label for="star-e"></label>
             </div>
 
@@ -63,10 +65,10 @@
 
             </fieldset>
             <div class="review">
-                <label for="review">Review:</label>
+                <label for="review">Review (Optional):</label>
                 <textarea id="review" name="review" rows="4"></textarea>
 
-                <label for="userName">User Name:</label>
+                <label for="userName">User Name (Optional):</label>
                 <input type="text" id="userName" name="userName">
 
                 <input type="submit" id="submit" value="Submit Review">
